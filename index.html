@@ -13,6 +13,7 @@
             <nav class="game-nav">
                 <button id="gacha-tab" class="active">뽑기</button>
                 <button id="roulette-tab">룰렛</button>
+                <button id="pinball-tab">핀볼</button>
             </nav>
         </header>
         <main>
@@ -34,12 +35,20 @@
                 <canvas id="roulette-canvas" width="400" height="400"></canvas>
                 <button id="spin-button">돌리기!</button>
             </div>
+
+            <div id="pinball-view" class="game-view">
+                <h2>핀볼 추첨</h2>
+                <div id="pinball-canvas-container"></div>
+                <button id="launch-button">공 발사!</button>
+            </div>
         </main>
         <footer>
             <p>&copy; 2024 Random Drawer</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>
     <script src="main.js"></script>
     <script src="roulette.js"></script>
+    <script src="pinball.js"></script>
 </body>
 </html>

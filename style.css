@@ -40,7 +40,7 @@ header h1 {
     line-height: 1.5;
 }
 
-#draw-button, #spin-button {
+#draw-button, #spin-button, #launch-button {
     background-color: #4a90e2;
     color: white;
     border: none;
@@ -51,7 +51,7 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-#draw-button:hover, #spin-button:hover {
+#draw-button:hover, #spin-button:hover, #launch-button:hover {
     background-color: #357abd;
 }
 
@@ -106,4 +106,10 @@ footer {
 
 #roulette-canvas {
     margin-bottom: 20px;
+}
+
+#pinball-canvas-container canvas {
+    background-color: #222;
+    display: block;
+    margin: 0 auto 20px;
 }
