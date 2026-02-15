@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핀볼 추첨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>핀볼 추첨</h1>
+            <a href="index.html" class="back-button">메인으로</a>
+        </header>
+        <main>
+            <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
+            <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
+            <div id="pinball-canvas-container"></div>
+            <button id="launch-button">공 발사!</button>
+        </main>
+        <footer>
+            <p>&copy; 2024 Random Drawer</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>
+    <script src="pinball.js"></script>
+</body>
+</html>

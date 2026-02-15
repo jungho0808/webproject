@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>룰렛 돌리기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>룰렛 돌리기</h1>
+            <a href="index.html" class="back-button">메인으로</a>
+        </header>
+        <main>
+            <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
+            <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
+            <canvas id="roulette-canvas" width="400" height="400"></canvas>
+            <button id="spin-button">돌리기!</button>
+        </main>
+        <footer>
+            <p>&copy; 2024 Random Drawer</p>
+        </footer>
+    </div>
+    <script src="roulette.js"></script>
+</body>
+</html>
