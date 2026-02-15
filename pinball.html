@@ -12,17 +12,24 @@
 <body>
     <div class="container">
         <header>
-            <h1>핀볼 추첨</h1>
-            <a href="index.html" class="back-button">메인으로</a>
+            <h1><a href="index.html">무작위 추첨</a></h1>
+            <nav>
+                <a href="gacha.html">항목 뽑기</a>
+                <a href="roulette.html">룰렛 돌리기</a>
+                <a href="pinball.html">핀볼 추첨</a>
+                <a href="about.html">소개</a>
+                <a href="contact.html">문의하기</a>
+            </nav>
         </header>
         <main>
-            <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
-            <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
+            <h2>핀볼 추첨</h2>
+            <p>전통적인 핀볼 게임의 재미와 무작위 추첨의 기능을 결합했습니다! 이 핀볼 추첨기는 시각적으로 흥미로운 방식으로 항목을 선택해야 할 때 적합합니다. 추첨할 항목들을 아래 상자에 한 줄에 하나씩 입력하고 '공 발사!' 버튼을 누르면, 핀볼이 복잡한 경로를 거쳐 무작위로 하나의 항목을 뽑아줍니다. 결과를 기다리는 동안 핀볼의 움직임을 즐겨보세요!</p>
+            <textarea id="item-input" rows="10" placeholder="예시)&#10;발표자 A&#10;발표자 B&#10;발표자 C&#10;발표자 D"></textarea>
             <div id="pinball-canvas-container"></div>
             <button id="launch-button">공 발사!</button>
         </main>
         <footer>
-            <p>&copy; 2024 Random Drawer</p>
+            <p>&copy; 2024 Random Drawer | <a href="privacy.html">개인정보처리방침</a> | <a href="about.html">소개</a> | <a href="contact.html">문의하기</a></p>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js"></script>

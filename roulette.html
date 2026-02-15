@@ -12,17 +12,24 @@
 <body>
     <div class="container">
         <header>
-            <h1>룰렛 돌리기</h1>
-            <a href="index.html" class="back-button">메인으로</a>
+            <h1><a href="index.html">무작위 추첨</a></h1>
+            <nav>
+                <a href="gacha.html">항목 뽑기</a>
+                <a href="roulette.html">룰렛 돌리기</a>
+                <a href="pinball.html">핀볼 추첨</a>
+                <a href="about.html">소개</a>
+                <a href="contact.html">문의하기</a>
+            </nav>
         </header>
         <main>
-            <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
-            <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
+            <h2>룰렛 돌리기</h2>
+            <p>고민되는 선택의 순간, 저희 룰렛이 당신을 도와줄 것입니다! 친구들과의 내기, 저녁 메뉴 고르기, 오늘의 행운 아이템 선정 등 다양한 상황에서 활용할 수 있습니다. 추첨하고 싶은 항목들을 아래 상자에 한 줄에 하나씩 입력하고 '돌리기!' 버튼을 누르면, 룰렛이 회전하며 무작위로 하나의 항목을 가리킵니다.</p>
+            <textarea id="item-input" rows="10" placeholder="예시)&#10;피자&#10;치킨&#10;햄버거&#10;족발"></textarea>
             <canvas id="roulette-canvas" width="400" height="400"></canvas>
             <button id="spin-button">돌리기!</button>
         </main>
         <footer>
-            <p>&copy; 2024 Random Drawer</p>
+            <p>&copy; 2024 Random Drawer | <a href="privacy.html">개인정보처리방침</a> | <a href="about.html">소개</a> | <a href="contact.html">문의하기</a></p>
         </footer>
     </div>
     <script src="roulette.js"></script>
