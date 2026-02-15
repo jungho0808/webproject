@@ -21,7 +21,7 @@ body {
 }
 
 header h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .gacha-container p {
@@ -40,7 +40,7 @@ header h1 {
     line-height: 1.5;
 }
 
-#draw-button {
+#draw-button, #spin-button {
     background-color: #4a90e2;
     color: white;
     border: none;
@@ -51,7 +51,7 @@ header h1 {
     transition: background-color 0.3s ease;
 }
 
-#draw-button:hover {
+#draw-button:hover, #spin-button:hover {
     background-color: #357abd;
 }
 
@@ -73,4 +73,37 @@ footer {
     margin-top: 30px;
     color: #999;
     font-size: 14px;
+}
+
+/* Game Navigation */
+.game-nav {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.game-nav button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.game-nav button.active {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+}
+
+/* Game Views */
+.game-view {
+    display: none;
+}
+
+.game-view.active {
+    display: block;
+}
+
+#roulette-canvas {
+    margin-bottom: 20px;
 }

@@ -10,17 +10,29 @@
     <div class="container">
         <header>
             <h1>무작위 추첨</h1>
+            <nav class="game-nav">
+                <button id="gacha-tab" class="active">뽑기</button>
+                <button id="roulette-tab">룰렛</button>
+            </nav>
         </header>
         <main>
-            <div class="gacha-container">
-                <h2>항목 뽑기</h2>
-                <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
-                <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
-                <button id="draw-button">뽑기!</button>
-                <div class="result-container">
-                    <h3>결과:</h3>
-                    <p id="result-display"></p>
+            <div id="gacha-view" class="game-view active">
+                <div class="gacha-container">
+                    <h2>항목 뽑기</h2>
+                    <p>추첨할 항목들을 한 줄에 하나씩 입력하세요.</p>
+                    <textarea id="item-input" rows="10" placeholder="예시)&#10;사과&#10;바나나&#10;오렌지"></textarea>
+                    <button id="draw-button">뽑기!</button>
+                    <div class="result-container">
+                        <h3>결과:</h3>
+                        <p id="result-display"></p>
+                    </div>
                 </div>
+            </div>
+
+            <div id="roulette-view" class="game-view">
+                <h2>룰렛 돌리기</h2>
+                <canvas id="roulette-canvas" width="400" height="400"></canvas>
+                <button id="spin-button">돌리기!</button>
             </div>
         </main>
         <footer>
@@ -28,5 +40,6 @@
         </footer>
     </div>
     <script src="main.js"></script>
+    <script src="roulette.js"></script>
 </body>
 </html>
