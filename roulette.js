@@ -70,8 +70,7 @@ function stopRotateWheel() {
 }
 
 spinButton.addEventListener('click', () => {
-    items = document.getElementById('item-input').value.split('
-').filter(item => item.trim() !== '');
+    items = document.getElementById('item-input').value.split('\n').filter(item => item.trim() !== '');
     if (items.length < 2) {
         alert("룰렛을 돌리려면 2개 이상의 항목이 필요합니다.");
         return;
@@ -81,8 +80,7 @@ spinButton.addEventListener('click', () => {
 
 // Initial draw
 document.addEventListener('DOMContentLoaded', () => {
-    items = document.getElementById('item-input').value.split('
-').filter(item => item.trim() !== '');
+    items = document.getElementById('item-input').value.split('\n').filter(item => item.trim() !== '');
     if(items.length > 0) {
         drawRoulette();
     }

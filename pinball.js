@@ -51,8 +51,7 @@ let slots = [];
 function createSlots() {
     Composite.remove(world, slots);
     slots = [];
-    const items = document.getElementById('item-input').value.split('
-').filter(item => item.trim() !== '');
+    const items = document.getElementById('item-input').value.split('\n').filter(item => item.trim() !== '');
     if (items.length < 2) return;
 
     const slotWidth = 400 / items.length;
