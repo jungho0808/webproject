@@ -63,3 +63,59 @@ footer {
     margin-top: 20px;
     color: #777;
 }
+/* Contact Form Styles */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-container form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-container form input[type="text"],
+.contact-container form input[type="email"],
+.contact-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.contact-container form input[type="text"]:focus,
+.contact-container form input[type="email"]:focus,
+.contact-container form textarea:focus {
+    border-color: #337ab7;
+    outline: none;
+}
+
+.contact-container form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container form button:hover {
+    background-color: #286090;
+}
