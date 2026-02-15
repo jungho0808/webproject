@@ -6,16 +6,22 @@ const posts = [
     { id: 5, title: '다섯 번째 글입니다.', author: '정오희', date: '2024-03-17', views: 55, content: '다섯 번째 글의 내용입니다. 여기에 글의 전체 내용이 표시됩니다.' },
 ];
 
-const boardBody = document.querySelector('.board-table tbody');
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = parseInt(urlParams.get('id'));
 
-posts.sort((a, b) => b.id - a.id).forEach(post => {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-        <td>${post.id}</td>
-        <td><a href="post.html?id=${post.id}">${post.title}</a></td>
-        <td>${post.author}</td>
-        <td>${post.date}</td>
-        <td>${post.views}</td>
-    `;
-    boardBody.appendChild(row);
+    if (postId) {
+        const post = posts.find(p => p.id === postId);
+
+        if (post) {
+            document.getElementById('post-title').textContent = post.title;
+            document.getElementById('post-author').textContent = post.author;
+            document.getElementById('post-date').textContent = post.date;
+            document.getElementById('post-content').textContent = post.content;
+        } else {
+            document.getElementById('post-title').textContent = 'Post not found';
+        }
+    } else {
+        document.getElementById('post-title').textContent = 'Post ID not provided';
+    }
 });

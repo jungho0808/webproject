@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 작성</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="write-container">
+        <h1>글 작성</h1>
+        <form id="write-form">
+            <label for="title">제목:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">내용:</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+
+            <button type="submit">작성하기</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('write-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('글이 "작성"되었습니다 (이것은 정적 목업입니다).');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

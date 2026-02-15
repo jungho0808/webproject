@@ -119,3 +119,100 @@ footer {
 .contact-container form button:hover {
     background-color: #286090;
 }
+
+/* Post View Styles */
+.post-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-container header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.post-container #post-title {
+    margin: 0;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.post-content {
+    line-height: 1.6;
+}
+
+/* Write Form Styles */
+.write-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.write-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.write-container form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.write-container form input[type="text"],
+.write-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.write-container form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.write-container form button:hover {
+    background-color: #286090;
+}
+
+.write-post-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.write-post-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.write-post-button:hover {
+    background-color: #286090;
+}
