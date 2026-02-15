@@ -1,27 +1,19 @@
-import { db } from './firebase-init.js';
-import { collection, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+document.addEventListener('DOMContentLoaded', () => {
+    const drawButton = document.getElementById('draw-button');
+    const itemInput = document.getElementById('item-input');
+    const resultDisplay = document.getElementById('result-display');
 
-const boardBody = document.querySelector('.board-table tbody');
+    drawButton.addEventListener('click', () => {
+        const items = itemInput.value.split('\n').filter(item => item.trim() !== '');
 
-async function fetchPosts() {
-    boardBody.innerHTML = ''; // Clear existing posts
-    const postsCol = collection(db, 'posts');
-    const q = query(postsCol, orderBy('timestamp', 'desc'));
-    const querySnapshot = await getDocs(q);
+        if (items.length === 0) {
+            resultDisplay.textContent = '추첨할 항목을 입력하세요.';
+            return;
+        }
 
-    let id = 1; // Assign a sequential ID for display purposes
-    querySnapshot.forEach((doc) => {
-        const post = doc.data();
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${id++}</td>
-            <td><a href="post.html?id=${doc.id}">${post.title}</a></td>
-            <td>${post.author}</td>
-            <td>${post.date}</td>
-            <td>${post.views || 0}</td>
-        `;
-        boardBody.appendChild(row);
+        const randomIndex = Math.floor(Math.random() * items.length);
+        const randomItem = items[randomIndex];
+
+        resultDisplay.textContent = randomItem;
     });
-}
-
-document.addEventListener('DOMContentLoaded', fetchPosts);
+});

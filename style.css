@@ -1,255 +1,76 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-nav {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-nav a:hover {
-    background-color: #555;
-}
-
-.board-container {
-    max-width: 1000px;
-    margin: 20px auto;
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.board-container header {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+header h1 {
     margin-bottom: 20px;
 }
 
-.board-container header h1 {
-    margin: 0;
-    font-size: 24px;
+.gacha-container p {
+    margin-bottom: 15px;
+    color: #666;
 }
 
-.board-table {
+#item-input {
     width: 100%;
-    border-collapse: collapse;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.board-table th,
-.board-table td {
-    border-bottom: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+#draw-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.board-table th {
+#draw-button:hover {
+    background-color: #357abd;
+}
+
+.result-container {
+    margin-top: 30px;
+    padding: 20px;
     background-color: #f9f9f9;
+    border-radius: 8px;
+    min-height: 50px;
 }
 
-.board-table a {
-    color: #337ab7;
-    text-decoration: none;
-}
-
-.board-table a:hover {
-    text-decoration: underline;
-}
-
-.board-table td:nth-child(1),
-.board-table td:nth-child(3),
-.board-table td:nth-child(4),
-.board-table td:nth-child(5) {
-    text-align: center;
+#result-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
 }
 
 footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px 0;
-    color: #777;
-    border-top: 1px solid #eee;
-}
-/* Contact Form Styles */
-.contact-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contact-container h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.contact-container form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.contact-container form input[type="text"],
-.contact-container form input[type="email"],
-.contact-container form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't increase width */
-}
-
-.contact-container form input[type="text"]:focus,
-.contact-container form input[type="email"]:focus,
-.contact-container form textarea:focus {
-    border-color: #337ab7;
-    outline: none;
-}
-
-.contact-container form button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #337ab7;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-container form button:hover {
-    background-color: #286090;
-}
-
-/* Post View Styles */
-.post-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.post-container header {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-.post-container #post-title {
-    margin: 0;
-}
-
-.post-meta {
-    color: #777;
+    margin-top: 30px;
+    color: #999;
     font-size: 14px;
-}
-
-.post-content {
-    line-height: 1.6;
-}
-
-/* Write Form Styles */
-.write-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.write-container h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.write-container form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.write-container form input[type="text"],
-.write-container form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.write-container form button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #337ab7;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.write-container form button:hover {
-    background-color: #286090;
-}
-
-.write-post-container {
-    text-align: right;
-    margin-bottom: 15px;
-}
-
-.write-post-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #337ab7;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.write-post-button:hover {
-    background-color: #286090;
-}
-
-/* Static Page Container */
-.static-page-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
 }

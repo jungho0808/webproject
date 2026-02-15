@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /write.html
-Disallow: /contact.html
-Disallow: /privacy.html
-Disallow: /about.html
-
-Sitemap: [YOUR_SITEMAP_URL]
