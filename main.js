@@ -1,26 +1,21 @@
-const generateBtn = document.getElementById('generate-btn');
-const nicknameDisplay = document.querySelector('.nickname-display');
-
-const nicknames = [
-    '아이유가뭐하는아이유',
-    '일곱글자닉네임',
-    '오글오글',
-    '닉네임짓기귀찮아',
-    '배고픈데밥먹을까',
-    '아재개그좋아해요',
-    '웃어주세요',
-    '반갑다친구야',
-    '나는야개그왕',
-    '센스있는척',
-    '중요한건꺾이지않는마음',
-    '오늘도무사히',
-    '내일은월급날',
-    '피할수없으면즐겨라',
-    '가는말이고와야오는말이곱다'
+const posts = [
+    { id: 1, title: '첫 번째 글입니다.', author: '박일희', date: '2024-03-13', views: 35 },
+    { id: 2, title: '두 번째 글입니다.', author: '이두희', date: '2024-03-14', views: 25 },
+    { id: 3, title: '세 번째 글입니다.', author: '김세희', date: '2024-03-15', views: 15 },
+    { id: 4, title: '네 번째 글입니다.', author: '최사희', date: '2024-03-16', views: 45 },
+    { id: 5, title: '다섯 번째 글입니다.', author: '정오희', date: '2024-03-17', views: 55 },
 ];
 
-generateBtn.addEventListener('click', () => {
-    const randomIndex = Math.floor(Math.random() * nicknames.length);
-    const nickname = nicknames[randomIndex];
-    nicknameDisplay.textContent = nickname;
+const boardBody = document.querySelector('.board-table tbody');
+
+posts.sort((a, b) => b.id - a.id).forEach(post => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td>${post.id}</td>
+        <td><a href="#">${post.title}</a></td>
+        <td>${post.author}</td>
+        <td>${post.date}</td>
+        <td>${post.views}</td>
+    `;
+    boardBody.appendChild(row);
 });

@@ -1,49 +1,65 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
+    padding: 20px;
 }
 
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.board-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.board-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.board-table th,
+.board-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.board-table th {
+    background-color: #f9f9f9;
+}
+
+.board-table a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.board-table a:hover {
+    text-decoration: underline;
+}
+
+.board-table td:nth-child(1),
+.board-table td:nth-child(3),
+.board-table td:nth-child(4),
+.board-table td:nth-child(5) {
     text-align: center;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.nickname-display {
-    min-height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #4a90e2;
-}
-
-#generate-btn {
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#generate-btn:hover {
-    background-color: #357abd;
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
 }

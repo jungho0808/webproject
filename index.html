@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>센스있는 닉네임 생성기</title>
+    <title>게시판</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>센스있는 닉네임 생성기</h1>
-        <div class="nickname-display"></div>
-        <button id="generate-btn">닉네임 생성</button>
+    <div class="board-container">
+        <header>
+            <h1>자유 게시판</h1>
+        </header>
+        <main>
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>작성일</th>
+                        <th>조회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Forum</p>
+        </footer>
     </div>
     <script src="main.js"></script>
 </body>
